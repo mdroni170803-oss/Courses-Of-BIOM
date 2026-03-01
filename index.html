@@ -35,8 +35,17 @@
 
     <style>
         /* আপনার আগের স্টাইল কোডগুলো এখানে থাকবে */
-        body { font-family: 'Poppins', sans-serif; background-color: #e2e8f0; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        ::-webkit-scrollbar { width: 0px; background: transparent; }
+      body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh; /* মোবাইলের ফুল স্ক্রিন নেওয়ার জন্য */
+    overflow: hidden; /* ব্যাকগ্রাউন্ড স্ক্রল বন্ধ করার জন্য */
+      } 
+          ::-webkit-scrollbar { width: 0px; background: transparent; }
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.3); }
         .glass-modal { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
         .premium-shadow { box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); }
@@ -44,7 +53,7 @@
 </head>
 <body>
 
-    <div id="root" class="w-full h-full sm:w-[414px] sm:h-[896px]"></div>
+    <div id="root" class="w-full h-[100dvh] sm:w-[414px] sm:h-[896px]"></div>
 
     <script type="text/babel">
         const { useState, useEffect } = React;
