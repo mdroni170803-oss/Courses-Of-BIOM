@@ -1,13 +1,10 @@
-const CACHE_NAME = 'biom-courses-v1';
+const CACHE_NAME = 'biom-courses-v2';
 const urlsToCache =[
   './',
   './index.html',
   './manifest.json',
-  'https://cdn.tailwindcss.com',
-  'https://unpkg.com/react@18/umd/react.production.min.js',
-  'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js',
-  'https://unpkg.com/@babel/standalone/babel.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'
+  './biom-192.png',
+  './biom-512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -16,6 +13,7 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(urlsToCache);
       })
+      .catch(err => console.log('Cache install error:', err))
   );
 });
 
